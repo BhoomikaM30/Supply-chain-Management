@@ -1,6 +1,6 @@
 # Supply Chain Analytics Dashboard
 
-![Dashboard](dashboard.png)
+![Dashboard](Supply_chain_analysis_dashboard.png)
 
 ## Business problem
 Is the supply chain healthy? Are orders delivered on time and in full, what is causing delays, where is stock too high or running out, and where does revenue come from?
