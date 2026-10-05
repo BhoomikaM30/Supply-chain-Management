@@ -1,34 +1,21 @@
-# Supply Chain Management
+# Supply Chain Analytics Dashboard
 
-Analytics project looking at sales, inventory, and supplier performance across regions. Built the data model in Excel, wrote SQL queries to explore it, and made dashboards in Power BI and Tableau.
+![Dashboard](dashboard.png)
 
-## What's in here
+## Business problem
+Is the supply chain healthy? Are orders delivered on time and in full, what is causing delays, where is stock too high or running out, and where does revenue come from?
 
-- `supply_chain_project_2.xlsx` - the main data model with fact and dimension tables, a data dictionary, and KPI/summary sheets
-- `supply_chain_sql.sql` - SQL queries used to explore customer, store, inventory, and sales data
-- `supply_chain_powerbi.pbix` - Power BI dashboard
-- `supply_chain_tableau.twbx` - Tableau dashboard
+## Key findings
+- Only 66% of orders arrive on time (target 90%). Same-day orders are worst at 12.5%.
+- Root cause: orders take about 5 days to leave the warehouse, but Same-day is promised in 2 days.
+- About 162 days of stock held (healthy is 30 to 60), with no stockouts.
+- Wholesale brings in 69% of revenue. Asia is the top region at 39%.
 
-## Data model
-
-Star schema with one main fact table (Fact_Orders) and a few dimension tables:
-
-- Dim_Product - product catalog, cost, price, category
-- Dim_Supplier - supplier info, tier, reliability score
-- Dim_Warehouse - location and capacity
-- Dim_Customer - region, segment
-- Fact_Inventory - inventory levels and value
-
-Column-level details are in the Data_Dictionary sheet inside the Excel file.
-
-## What it covers
-
-- Revenue by region
-- On-time vs delayed order delivery
-- Gross margin by product category
-- Supplier reliability
-- Inventory value by product family
+## Recommendations
+1. Cut warehouse processing time from about 5 days to 3 or less.
+2. Stop promising 2-day delivery on Same-day until processing is faster.
+3. Add buffer to promised dates for Air and Rail.
+4. Reduce stock levels, since there are no stockouts.
 
 ## Tools
-
-SQL, Excel, Power BI, Tableau
+Power BI, DAX. Dataset: 12,000 orders, 6 tables, star schema.
